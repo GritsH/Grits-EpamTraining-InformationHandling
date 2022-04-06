@@ -21,6 +21,6 @@ public class Letter implements Text{
 
     @Override
     public CompositeType getType() {
-        return null;
+        return CompositeType.LETTER;
     }
 }
