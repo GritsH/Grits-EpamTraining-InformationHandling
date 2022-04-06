@@ -10,7 +10,7 @@ public class ParagraphParser implements IParser{
         TextComposite paragraphComposite = new TextComposite(CompositeType.PARAGRAPH);
         Text sentenceComposite;
         IParser sentenceParser = new SentenceParser();
-        String[] sentences = inputParagraph.split(CompositeType.PARAGRAPH.getTypeRegExp());
+        String[] sentences = inputParagraph.split(CompositeType.SENTENCE.getTypeRegExp());
         for (String sentence : sentences) {
             sentenceComposite = sentenceParser.parseText(sentence);
             paragraphComposite.addComponent(sentenceComposite);
