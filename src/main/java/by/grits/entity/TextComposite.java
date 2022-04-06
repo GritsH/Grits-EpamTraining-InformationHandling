@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TextComposite implements Text {
-  private List<Text> textComponents;
+  private List<Text> textComponents = new ArrayList<>();
   private CompositeType compositeType;
 
   public TextComposite() {
@@ -31,7 +31,7 @@ public class TextComposite implements Text {
   public String getContents() {
     StringBuilder content = new StringBuilder();
     for (Text textComponent : textComponents) {
-        content.append(textComponent.getContents());
+      content.append(textComponent.getContents());
     }
     return content.toString();
   }
