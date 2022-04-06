@@ -3,9 +3,9 @@ package by.grits.entity;
 import java.util.Objects;
 
 public enum CompositeType {
-  LETTER("[A-Za-z]+"),
+  LETTER(),
   WORD("(?<=\\s)"),
-  SENTENCE("^\\s+[A-Za-z,;'\"\\s]+[.?!]$"),
+  SENTENCE("([A-Z][^\\.!?]*[\\.!?])[\\\\p{Zs}|\\\\n]"),
   PARAGRAPH("(?<=\\n)"),
   LEXEME(" "),
   TEXT();
