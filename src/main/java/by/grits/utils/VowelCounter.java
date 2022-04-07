@@ -18,7 +18,7 @@ public class VowelCounter {
             .flatMap(word -> word.getTextComponents().stream())
             .filter(letter -> letter.getContents().matches("[aeiou]|[уеэоаыи]"))
             .count();
-    LOGGER.info("Vowels: " + vowelsLettersCount + 1);
+    LOGGER.info("Vowels: " + vowelsLettersCount);
 
     long consonantsLettersCount =
         text.getTextComponents().stream()
@@ -32,7 +32,7 @@ public class VowelCounter {
     List<Long> results = new ArrayList<>();
     results.add(vowelsLettersCount + 1);
     results.add(consonantsLettersCount + 1);
-    LOGGER.info("Consonants: " + consonantsLettersCount + 1);
+    LOGGER.info("Consonants: " + consonantsLettersCount);
     return results;
   }
 }
