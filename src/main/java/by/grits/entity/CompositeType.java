@@ -5,7 +5,7 @@ import java.util.Objects;
 public enum CompositeType {
   LETTER(),
   WORD("(?<=\\s)"),
-  SENTENCE("([A-Z][^\\.!?]*[\\.!?])[\\\\p{Zs}|\\\\n]"),
+  SENTENCE("(?<!\\w\\.\\w.)(?<![A-Z][a-z]\\.)(?<=\\.|\\?|!)[\\p{Zs}|\\n]"),
   PARAGRAPH("(?<=\\n)"),
   LEXEME(" "),
   TEXT();
