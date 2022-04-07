@@ -1,6 +1,5 @@
 package by.grits.utils;
 
-import by.grits.entity.CompositeType;
 import by.grits.entity.Text;
 import by.grits.entity.TextComposite;
 import org.apache.logging.log4j.LogManager;

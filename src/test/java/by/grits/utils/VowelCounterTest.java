@@ -24,7 +24,7 @@ class VowelCounterTest {
   }
 
   @Test
-  void shouldCountVowels(){
+  void shouldCountVowels() {
     List<Long> expected = new ArrayList<>();
     expected.add(9L);
     expected.add(10L);

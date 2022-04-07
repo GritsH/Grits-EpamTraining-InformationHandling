@@ -41,7 +41,7 @@ class TextParserTest {
     originalText = fileReader.readFromFile(filePath);
     Text parsedText = parser.parseText(originalText);
     int parsedSentencesCounter = 0;
-    for (int i = 0; i < parsedText.getTextComponents().size(); i++) { 
+    for (int i = 0; i < parsedText.getTextComponents().size(); i++) {
       Text parsedSentences = parsedText.getTextComponents().get(i);
       for (int j = 0; j < parsedSentences.getTextComponents().size(); j++) {
         parsedSentencesCounter = parsedSentencesCounter + 1;
