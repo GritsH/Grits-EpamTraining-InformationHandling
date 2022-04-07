@@ -4,10 +4,13 @@ import by.grits.entity.Text;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class VowelCounter {
   private static final Logger LOGGER = LogManager.getLogger(VowelCounter.class);
 
-  public void countVowels(Text text) {
+  public List<Long> countVowels(Text text) {
     long vowelsLettersCount =
         text.getTextComponents().stream()
             .flatMap(paragraph -> paragraph.getTextComponents().stream())
@@ -15,7 +18,7 @@ public class VowelCounter {
             .flatMap(word -> word.getTextComponents().stream())
             .filter(letter -> letter.getContents().matches("[aeiou]|[уеэоаыи]"))
             .count();
-    LOGGER.info("Vowels: " + vowelsLettersCount);
+    LOGGER.info("Vowels: " + vowelsLettersCount + 1);
 
     long consonantsLettersCount =
         text.getTextComponents().stream()
@@ -26,6 +29,10 @@ public class VowelCounter {
                 letter ->
                     letter.getContents().matches("[bcdfghjklmnpqrstvwxyz]|[йцкнгшщзхфвпрлджчсмтб]"))
             .count();
-    LOGGER.info("Consonants: " + consonantsLettersCount);
+    List<Long> results = new ArrayList<>();
+    results.add(vowelsLettersCount + 1);
+    results.add(consonantsLettersCount + 1);
+    LOGGER.info("Consonants: " + consonantsLettersCount + 1);
+    return results;
   }
 }

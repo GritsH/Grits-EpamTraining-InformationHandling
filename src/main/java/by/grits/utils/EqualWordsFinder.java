@@ -11,7 +11,7 @@ import java.util.stream.IntStream;
 public class EqualWordsFinder {
   private static final Logger LOGGER = LogManager.getLogger(EqualWordsFinder.class);
 
-  public void findEqualWords(Text text) {
+  public Map<String, Integer> findEqualWords(Text text) {
     Map<String, Integer> words = new HashMap<>();
     List<Text> textWords =
         text.getTextComponents().stream()
@@ -35,6 +35,7 @@ public class EqualWordsFinder {
         words.put(word, count);
       }
     }
-    LOGGER.info("Repeated words:\n" + words);
+    words.remove("");
+    return words;
   }
 }

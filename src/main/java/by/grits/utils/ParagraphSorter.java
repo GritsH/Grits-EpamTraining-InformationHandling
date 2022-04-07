@@ -10,7 +10,7 @@ import java.util.List;
 public class ParagraphSorter {
   private static final Logger LOGGER = LogManager.getLogger(ParagraphSorter.class);
 
-  public void sort(Text text) {
+  public TextComposite sort(Text text) {
     TextComposite sorted = new TextComposite();
     List<Text> paragraphs = text.getTextComponents();
     for (int i = 0; i < paragraphs.size() - 1; i++) {
@@ -24,6 +24,6 @@ public class ParagraphSorter {
       }
     }
     sorted.setTextComponents(paragraphs);
-    LOGGER.info("Sorted:\n" + sorted.getContents());
+    return sorted;
   }
 }

@@ -36,12 +36,12 @@ public class TextComposite implements Text {
     return textComponents;
   }
 
-  public void setTextComponents(List<Text> textComponents) {
-    this.textComponents = textComponents;
-  }
-
   @Override
   public CompositeType getType() {
     return compositeType;
+  }
+
+  public void setTextComponents(List<Text> textComponents) {
+    this.textComponents = textComponents;
   }
 }

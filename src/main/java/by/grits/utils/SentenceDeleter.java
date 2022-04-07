@@ -12,7 +12,7 @@ import java.util.List;
 public class SentenceDeleter {
   private static final Logger LOGGER = LogManager.getLogger(SentenceDeleter.class);
 
-  public void deleteSentences(Text text, int wordsAmount) {
+  public String deleteSentences(Text text, int wordsAmount) {
     List<Text> paragraphs = text.getTextComponents();
     List<Text> sentences = new ArrayList<>();
     for (Text paragraph : paragraphs) {
@@ -26,6 +26,6 @@ public class SentenceDeleter {
     }
 
     TextComposite deletedText = new TextComposite(sentences);
-    LOGGER.info("With deleted sentences:\n" + deletedText.getContents());
+    return deletedText.getContents();
   }
 }
