@@ -1,7 +1,5 @@
 package by.grits.entity;
 
-import java.util.Objects;
-
 public enum CompositeType {
   LETTER(),
   WORD("(?<=\\s)"),
@@ -12,7 +10,7 @@ public enum CompositeType {
 
   String typeRegExp;
 
-  CompositeType(){}
+  CompositeType() {}
 
   CompositeType(String typeRegExp) {
     this.typeRegExp = typeRegExp;

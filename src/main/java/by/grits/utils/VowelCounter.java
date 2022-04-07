@@ -1,8 +1,6 @@
 package by.grits.utils;
 
 import by.grits.entity.Text;
-import by.grits.parsers.IParser;
-import by.grits.parsers.SentenceParser;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

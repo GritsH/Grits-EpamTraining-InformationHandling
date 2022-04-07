@@ -10,8 +10,9 @@ public class WordParser implements IParser {
   @Override
   public Text parseText(String inputWord) {
     TextComposite word = new TextComposite(CompositeType.WORD);
+    Text letter;
     for (int i = 0; i < inputWord.length(); i++) {
-      Text letter = new Letter(inputWord.charAt(i));
+      letter = new Letter(inputWord.charAt(i));
       word.addComponent(letter);
     }
     return word;

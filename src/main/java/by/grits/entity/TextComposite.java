@@ -5,11 +5,10 @@ import java.util.List;
 
 public class TextComposite implements Text {
   private List<Text> textComponents = new ArrayList<>();
+
   private CompositeType compositeType;
 
-  public TextComposite() {
-    textComponents = new ArrayList<>();
-  }
+  public TextComposite() {}
 
   public TextComposite(List<Text> textComponents) {
     this.textComponents = textComponents;
@@ -17,10 +16,6 @@ public class TextComposite implements Text {
 
   public TextComposite(CompositeType compositeType) {
     this.compositeType = compositeType;
-  }
-
-  public void setTextComponents(List<Text> textComponents) {
-    this.textComponents = textComponents;
   }
 
   public void addComponent(Text textComponent) {
@@ -39,6 +34,10 @@ public class TextComposite implements Text {
   @Override
   public List<Text> getTextComponents() {
     return textComponents;
+  }
+
+  public void setTextComponents(List<Text> textComponents) {
+    this.textComponents = textComponents;
   }
 
   @Override
