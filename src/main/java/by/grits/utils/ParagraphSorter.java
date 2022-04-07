@@ -13,9 +13,9 @@ public class ParagraphSorter {
   public void sort(Text text) {
     TextComposite sorted = new TextComposite();
     List<Text> paragraphs = text.getTextComponents();
-    for (int i = 0; i < paragraphs.size(); i++) {
+    for (int i = 0; i < paragraphs.size() - 1; i++) {
       for (int j = 0; j < paragraphs.size() - i - 1; j++) {
-        if (paragraphs.get(i).getTextComponents().size()
+        if (paragraphs.get(j).getTextComponents().size()
             < paragraphs.get(j + 1).getTextComponents().size()) {
           Text temp = paragraphs.get(j);
           paragraphs.set(j, paragraphs.get(j + 1));
